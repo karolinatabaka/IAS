@@ -1,0 +1,9 @@
+C:\Users\Bartlomiej\Desktop\movieLib\MovieLib\ProviderOne\bin\Debug\ProviderOne.dll.config
+C:\Users\Bartlomiej\Desktop\movieLib\MovieLib\ProviderOne\bin\Debug\ProviderOne.dll
+C:\Users\Bartlomiej\Desktop\movieLib\MovieLib\ProviderOne\bin\Debug\ProviderOne.pdb
+C:\Users\Bartlomiej\Desktop\movieLib\MovieLib\ProviderOne\bin\Debug\EntityFramework.dll
+C:\Users\Bartlomiej\Desktop\movieLib\MovieLib\ProviderOne\bin\Debug\EntityFramework.xml
+C:\Users\Bartlomiej\Desktop\movieLib\MovieLib\ProviderOne\obj\Debug\ProviderOne.dll
+C:\Users\Bartlomiej\Desktop\movieLib\MovieLib\ProviderOne\obj\Debug\ProviderOne.pdb
+C:\Users\Bartlomiej\Desktop\movieLib\MovieLib\ProviderOne\bin\Debug\FizzWare.NBuilder.dll
+C:\Users\Bartlomiej\Desktop\movieLib\MovieLib\ProviderOne\obj\Debug\ProviderOne.csprojResolveAssemblyReference.cache

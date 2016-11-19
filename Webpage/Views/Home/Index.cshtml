@@ -1,0 +1,28 @@
+﻿@model List<Webpage.Model.HubMovie>
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12">
+            <h1 class="page-header">
+                MovieLib Webpage
+            </h1>
+        </div>
+    </div>
+    <div class="row">
+        @foreach (var movie in Model)
+        {
+            <div class="col-md-4 portfolio-item">
+
+                <a href="@Url.Action("Details","Home", new { provider = movie.Provider, id = movie.Id })">
+                    <img src="http://lorempixel.com/700/400/" class="img-responsive">
+                </a>
+                <h3>
+                    @Html.ActionLink(movie.Name, "Details", "Home", new { provider = movie.Provider, id = movie.Id }, null)
+                </h3>
+            </div>
+        }
+    </div>
+</div>

@@ -1,0 +1,39 @@
+﻿@model Webpage.Model.HubMovie
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12">
+            <h1 class="page-header">
+                @Model.Name
+                <small>provided by Provider @((int)Model.Provider)</small>
+            </h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-8">
+            <!-- the actual blog post: title/author/date/content -->
+            <hr>
+            <p>
+                <i class="fa fa-clock-o"></i> Published on @Model.PublishDate.ToShortDateString()
+            </p>
+            <hr>
+            <img class="img-responsive" src="http://lorempixel.com/900/300/">
+            <hr>
+            <p class="lead">
+                @Model.Description
+            </p>
+           
+            <hr>
+         
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-12">
+            <ol class="breadcrumb">
+                <li>
+                    @Html.ActionLink("back to movie list", "Index", "Home")
+                </li>
+            </ol>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,32 @@
+﻿<div class="jumbotron">
+    <h1>MovieLib API</h1>
+    <p class="lead">ASP.NET API based with 2 separate movie database providers (MsSQL, MongoDB)</p>
+</div>
+<div class="row">
+    <div class="col-md-4">
+        <h2>Get Movie List</h2>
+        <blockquote>/api/movies</blockquote>
+        <a href="/api/movies">Get movie list</a>
+    </div>
+    <div class="col-md-4">
+        <h2>Get Movie</h2>
+        <blockquote>
+            /api/movies/{provider}/{id}
+        </blockquote>
+        <a href="/api/movies/1/1">Get provider 1 movie 1</a>
+        <br />
+        <br/>
+        <p>
+            <h4>
+                For MsSQL Provider 
+            </h4>
+            <i>Set provider to 1</i>
+        </p>
+        <p>
+            <h4>
+                For MongoDB Provider 
+            </h4>
+            <i>Set provider to 2</i>
+        </p>
+    </div>
+</div>
