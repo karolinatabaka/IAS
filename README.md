@@ -12,7 +12,7 @@ Integracja aplikacji i systemów
 - Implmentacja HUB,
 - Implementacja Generatora Danych dla Providera 1 i 2
 
-## XXXXXX - Tomasz Tomaszewski 
+## 162172 - Tomasz Tomaszewski 
 - Implementacja API,
 - Implementacja Klienta
 - Stylizowanie Klienta + Implemetnacja mechanizmu wyswietlania losowych obrazków dla filmów
