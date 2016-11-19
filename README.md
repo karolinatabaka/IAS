@@ -94,8 +94,8 @@ namespace ProviderTwo
 }
 ```
 
-# Opis huba
-Głównym zadaniem HUB'a jest integracja i uspujnianie danych otrzymywanych od różnych providerów.
+# Opis HUB'a
+Głównym zadaniem HUB'a jest integracja i uspójnianie danych otrzymywanych od różnych providerów.
 Wspierane akcje: GetMovies, GetByID
 
 ## Przebieg integracji encji
