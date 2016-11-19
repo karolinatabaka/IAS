@@ -147,9 +147,11 @@ namespace HUB
 
 ## Integracja z MongoDB
 MongoDB nie jest typową bazą danych. Główne różnice między MongoDB a relacyjnymi bazami danych to między innymi
+
 - Brak SQL ( Mongo używa własnego języka zapytań )
 - Brak schematu bazy danych
-Ze względu na te różnice na poziomie integracji z bazą MongoDB napotkaliśmy problemy z jego sposobem na przechowywanie i generwanie kluczy głównych oraz to jak je odzwierciedliś na poziomie imeplementacji.
+
+Ze względu na te różnice na poziomie integracji z bazą MongoDB napotkaliśmy problemy z jego sposobem na przechowywanie i generwanie kluczy głównych oraz to jak je odzwierciedlić na poziomie imeplementacji.
 
 ## Separacja logiki zwracającej dane w zależności od providera
 Zazwyczaj akcje zwracające szczegóły danej encji implementowane są na zasadzie GetById z jednym parametrem wejściowym Id. Ze względu na specyfikację projektu i fakt korzystania z wielu providerów to podejście musiało zostać przełamane. Struktura wynikowa encji została poszerzona o możliwość zapisu swojego pochodzenia (providera). 
@@ -167,4 +169,4 @@ public HubMovie Get(Provider provider, int id)
 https://github.com/karolinatabaka/IAS
 
 # Co byśmy zmienili gdybyśmy robili ten projekt jeszcze raz?
-Na etapie implemetacji samego HUB. Warto byłoby wprowadzić pośedniczącą bazę danych. Rozwiązało by to problem poszerzenia kontekstu na poziomie zapytań do API zwracających szczegółowe dane filmu: Get(Provider provider, int id). Pośrednicząca baza danych miała by wlasne klucze główne więc akcja zwracjąca szczegółowe dane filmu mogłaby zostać uproszczona: Get(int id). Dodatkowo pośrednicząca baza danych stworzyła by miejsce na zaawansowaną komunikację z providerami (np. synchronizacja danych tylko raz na jakiś czas, co zmniejszyłoby obciążenie serwera).
+Na etapie implemetacji samego HUB, warto byłoby wprowadzić pośredniczącą bazę danych. Rozwiązało by to problem poszerzenia kontekstu na poziomie zapytań do API zwracających szczegółowe dane filmu: Get(Provider provider, int id). Pośrednicząca baza danych miała by własne klucze główne, więc akcja zwracjąca szczegółowe dane filmu mogłaby zostać uproszczona: Get(int id). Dodatkowo pośrednicząca baza danych stworzyła by miejsce na zaawansowaną komunikację z providerami (np. synchronizacja danych tylko raz na jakiś czas, co zmniejszyłoby obciążenie serwera).
