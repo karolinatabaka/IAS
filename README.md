@@ -26,18 +26,27 @@ Projekt powstał w oparciu o technolgie Microsoft .NET.
 - Provider2: MongoDB
 
 # Schemat oraz opis architektury systemu
-Client - strona internetowa prezentująca dane użytkownikowi końcowemu. Komunikuje się wyłącznie z API.
-API - wykorzystuje HUB do pozyskiwania danych od providerów. Udostępnia endpoint'y konsumowane przez aplikacje klienckie zwracające dane w formacie JSON.
-HUB - integruje i udostępnia dane od różnych providerów. Działa w oparciu o uspójniony model danych aby wykluczyć różnice w modelach przychodzących od providerów.
-Provider 1 - umożliwia odczyt danych z bazy MSSQL. Dodatkowo implmentuje generator danych wypełniających bazę.
-Provider 2 - umożliwia odczyt danych z bazy MongoDB. Dodatkowo implmentuje generator danych wypełniających bazę.
+### Client 
+Strona internetowa prezentująca dane użytkownikowi końcowemu. Komunikuje się wyłącznie z API.
+
+### API 
+Wykorzystuje HUB do pozyskiwania danych od providerów. Udostępnia endpoint'y konsumowane przez aplikacje klienckie zwracające dane w formacie JSON.
+
+### HUB 
+Integruje i udostępnia dane od różnych providerów. Działa w oparciu o uspójniony model danych aby wykluczyć różnice w modelach przychodzących od providerów.
+
+### Provider 1 
+Umożliwia odczyt danych z bazy MSSQL. Dodatkowo implmentuje generator danych wypełniających bazę.
+
+### Provider 2 
+Umożliwia odczyt danych z bazy MongoDB. Dodatkowo implmentuje generator danych wypełniających bazę.
 
 ![schemat.png](https://raw.githubusercontent.com/karolinatabaka/IAS/master/Docs/schemat.PNG)
 
 # Opis dostawców, struktura encji
 
 ## Provider 1 
-Baza MSSQL. Wymaga instalacji środowiska MSSQL Server Express + MSSQL Server Management Studio. Integracja z baza następuje bezpośrednio z poziomu Visual Studio za pomocą wbudowanych providerów. Na bazie struktury danych tworzony jest automatyczny model, wykorzystywany następnie w implmentacji logiki pozostałej części aplikacji.
+Baza MSSQL. Wymaga instalacji środowiska MSSQL Server Express + MSSQL Server Management Studio. Integracja z bazą następuje bezpośrednio z poziomu Visual Studio za pomocą wbudowanych providerów. Na bazie struktury danych tworzony jest automatyczny model, wykorzystywany następnie w implmentacji logiki pozostałej części aplikacji.
 
 ### Struktura encji
 ```
